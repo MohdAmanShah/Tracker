@@ -13,6 +13,7 @@ CREATE TABLE tblUser
     UserName nvarchar(40) NOT NULL,
     Email varchar(50) UNIQUE NOT NULL,
     [Password] BINARY(60),
+    EmailVerified BIT DEFAULT 0,
     Salt BINARY(60)
 );
 
@@ -40,62 +41,78 @@ CREATE TABLE tblExpense
 );
 
 
-INSERT INTO tblCategory (CategoryName)
-VALUES 
-('Groceries'),
-('Restaurants'),
-('Coffee Shops'),
-('Snacks'),
-('Fuel'),
-('Public Transit'),
-('Parking'),
-('Taxis/Rideshare'),
-('Rent/Mortgage'),
-('Utilities'),
-('Internet/Cable'),
-('Maintenance/Repairs'),
-('Phone Bill'),
-('Electricity'),
-('Water'),
-('Gas'),
-('Internet'),
-('Movies'),
-('Concerts'),
-('Subscriptions'),
-('Games'),
-('Gym Memberships'),
-('Doctor Visits'),
-('Medications'),
-('Supplements'),
-('Haircuts'),
-('Skincare'),
-('Cosmetics'),
-('Toiletries'),
-('Clothing'),
-('Electronics'),
-('Home Goods'),
-('Gifts'),
-('Flights'),
-('Hotels'),
-('Car Rentals'),
-('Tours/Activities'),
-('Books'),
-('Courses'),
-('School Fees'),
-('Supplies'),
-('Health Insurance'),
-('Car Insurance'),
-('Home Insurance'),
-('Life Insurance'),
-('Credit Card Payments'),
-('Loan Payments'),
-('Mortgage Payments'),
-('Savings Deposits'),
-('Investments'),
-('Retirement Contributions'),
-('Donations'),
-('Charity'),
-('Unexpected Expenses');
+INSERT INTO tblCategory
+    (CategoryName)
+VALUES
+    ('Groceries'),
+    ('Restaurants'),
+    ('Coffee Shops'),
+    ('Snacks'),
+    ('Fuel'),
+    ('Public Transit'),
+    ('Parking'),
+    ('Taxis/Rideshare'),
+    ('Rent/Mortgage'),
+    ('Utilities'),
+    ('Internet/Cable'),
+    ('Maintenance/Repairs'),
+    ('Phone Bill'),
+    ('Electricity'),
+    ('Water'),
+    ('Gas'),
+    ('Internet'),
+    ('Movies'),
+    ('Concerts'),
+    ('Subscriptions'),
+    ('Games'),
+    ('Gym Memberships'),
+    ('Doctor Visits'),
+    ('Medications'),
+    ('Supplements'),
+    ('Haircuts'),
+    ('Skincare'),
+    ('Cosmetics'),
+    ('Toiletries'),
+    ('Clothing'),
+    ('Electronics'),
+    ('Home Goods'),
+    ('Gifts'),
+    ('Flights'),
+    ('Hotels'),
+    ('Car Rentals'),
+    ('Tours/Activities'),
+    ('Books'),
+    ('Courses'),
+    ('School Fees'),
+    ('Supplies'),
+    ('Health Insurance'),
+    ('Car Insurance'),
+    ('Home Insurance'),
+    ('Life Insurance'),
+    ('Credit Card Payments'),
+    ('Loan Payments'),
+    ('Mortgage Payments'),
+    ('Savings Deposits'),
+    ('Investments'),
+    ('Retirement Contributions'),
+    ('Donations'),
+    ('Charity'),
+    ('Unexpected Expenses');
 
 
-SELECT CategoryName FROM tblCategory;
+SELECT CategoryName
+FROM tblCategory;
+
+ALTER TABLE tblUser
+ADD EmailVerified BIT DEFAULT 0;
+
+
+SELECT UserName, Email, EmailVerified, [Password], Salt
+FROM tblUser;
+use expensetracker;
+SELECT name FROM sys.tables;
+SELECT * FROM sys.databases;
+
+use ExpenseTracker;
+
+

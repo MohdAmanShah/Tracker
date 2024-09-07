@@ -1,0 +1,16 @@
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/bin/Debug/net8.0/Expense.Tracker.DatabaseService.deps.json
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/bin/Debug/net8.0/Expense.Tracker.DatabaseService.dll
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/bin/Debug/net8.0/Expense.Tracker.DatabaseService.pdb
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/bin/Debug/net8.0/Expense.Tracker.DataModels.dll
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/bin/Debug/net8.0/Expense.Tracker.DataModels.pdb
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.csproj.AssemblyReference.cache
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.GeneratedMSBuildEditorConfig.editorconfig
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.AssemblyInfoInputs.cache
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.AssemblyInfo.cs
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.csproj.CoreCompileInputs.cache
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.sourcelink.json
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense..31310EEC.Up2Date
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.dll
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/refint/Expense.Tracker.DatabaseService.dll
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/Expense.Tracker.DatabaseService.pdb
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/Debug/net8.0/ref/Expense.Tracker.DatabaseService.dll

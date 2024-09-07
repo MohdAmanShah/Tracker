@@ -1,0 +1,12 @@
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/bin/Debug/net8.0/Expense.Tracker.DataModels.deps.json
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/bin/Debug/net8.0/Expense.Tracker.DataModels.dll
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/bin/Debug/net8.0/Expense.Tracker.DataModels.pdb
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/Expense.Tracker.DataModels.GeneratedMSBuildEditorConfig.editorconfig
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/Expense.Tracker.DataModels.AssemblyInfoInputs.cache
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/Expense.Tracker.DataModels.AssemblyInfo.cs
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/Expense.Tracker.DataModels.csproj.CoreCompileInputs.cache
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/Expense.Tracker.DataModels.sourcelink.json
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/Expense.Tracker.DataModels.dll
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/refint/Expense.Tracker.DataModels.dll
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/Expense.Tracker.DataModels.pdb
+/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/Debug/net8.0/ref/Expense.Tracker.DataModels.dll

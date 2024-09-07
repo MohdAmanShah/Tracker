@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "restore": {
+    "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/Expense.Tracker.DatabaseService.csproj": {}
+  },
+  "projects": {
+    "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/Expense.Tracker.DataModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/Expense.Tracker.DataModels.csproj",
+        "projectName": "Expense.Tracker.DataModels",
+        "projectPath": "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/Expense.Tracker.DataModels.csproj",
+        "packagesPath": "/home/aman/.nuget/packages/",
+        "outputPath": "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/aman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/aman/Software/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/Expense.Tracker.DatabaseService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/Expense.Tracker.DatabaseService.csproj",
+        "projectName": "Expense.Tracker.DatabaseService",
+        "projectPath": "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/Expense.Tracker.DatabaseService.csproj",
+        "packagesPath": "/home/aman/.nuget/packages/",
+        "outputPath": "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DatabaseService/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/aman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/Expense.Tracker.DataModels.csproj": {
+                "projectPath": "/media/aman/SecondaryDrive/Work/SoftwareDevelopment/Tracker/ExpenseTracker/expense-tracker-api/Expense.Tracker.DataModels/Expense.Tracker.DataModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Data.Common": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Data.Odbc": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/aman/Software/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
