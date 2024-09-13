@@ -1,6 +1,6 @@
 using System;
 
-namespace Expense.Tracker.DatabaseService.ConnectionFactory;
+namespace Expense.Tracker.DatabaseService.DatabaseProviderFactory;
 
 public enum DataProviderEnum
 {

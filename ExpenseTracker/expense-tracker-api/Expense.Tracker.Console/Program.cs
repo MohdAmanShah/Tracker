@@ -1,58 +1,70 @@
-﻿using System.Data.Common;
-using Microsoft.Data.SqlClient;
-using Expense.Tracker.DatabaseService.ConnectionFactory;
-using Microsoft.Extensions.Configuration;
+﻿using System.Buffers;
+using Expense.Tracker.DatabaseService.DataOperations;
+using Expense.Tracker.DataModels;
+using Expense.Tracker.DataModels.ViewModels;
+
+Console.Clear();
+PrintTrackerList();
 
 
-
-Console.WriteLine("***** Fun with Data Provider Factories *****\n");
-var (provider, connectionString) = GetProviderFromConfiguration();
-DbProviderFactory factory = GetDbProviderFactory(provider);
-// Now get the connection object.
-using (DbConnection connection = factory.CreateConnection())
+void PrintCategoryList()
 {
-    Console.WriteLine($"Your connection object is a: {connection.GetType().Name}");
-    connection.ConnectionString = connectionString;
-    connection.Open();
-    // Make command object.
-    DbCommand command = factory.CreateCommand();
-    Console.WriteLine($"Your command object is a: {command.GetType().Name}");
-    command.Connection = connection;
-    command.CommandText =
-    "Select i.Id, m.Name From Inventory i inner join Makes m on m.Id = i.MakeId ";
-    // Print out data with data reader.
-    using (DbDataReader dataReader = command.ExecuteReader())
+    using (CategoryOperations operations = new CategoryOperations())
     {
-        Console.WriteLine($"Your data reader object is a: {dataReader.GetType().Name}");
-        Console.WriteLine("\n***** Current Inventory *****");
-        while (dataReader.Read())
+        var categories = operations.GetAllCategories();
+        foreach (var category in categories)
         {
-            Console.WriteLine($"-> Car #{dataReader["Id"]} is a {dataReader["Name"]}.");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(category.CategoryId);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(": {0}", category.CategoryName);
         }
+        Console.ForegroundColor = ConsoleColor.White;
     }
 }
-Console.ReadLine();
 
-static DbProviderFactory GetDbProviderFactory(DataProviderEnum provider)
-=> provider switch
+
+void InsertIntoCategory(string name)
 {
-    DataProviderEnum.SqlServer => SqlClientFactory.Instance,
-    _ => SqlClientFactory.Instance
-};
-
-
-static (DataProviderEnum Provider, string ConnectionString)
-GetProviderFromConfiguration()
-{
-    IConfiguration config = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.json", true, true)
-    .Build();
-    var providerName = config["ProviderName"];
-    if (Enum.TryParse<DataProviderEnum>
-    (providerName, out DataProviderEnum provider))
+    using (CategoryOperations operations = new CategoryOperations())
     {
-        return (provider, config[$"{providerName}:ConnectionString"]);
-    };
-    throw new Exception("Invalid data provider value supplied.");
+        CategoryModel category = new CategoryModel
+        {
+            CategoryName = name,
+        };
+        operations.InsertCategory(category);
+    }
+}
+
+void DeleteFromCategory(int id)
+{
+    using (CategoryOperations operations = new CategoryOperations())
+    {
+        operations.DeleteCategory(id);
+    }
+}
+
+void PrintTracker(int id)
+{
+    using (TrackerOperations operations = new TrackerOperations())
+    {
+        TrackerViewModelAll tracker = operations.GetTracker(id);
+        Console.WriteLine(tracker.TrackerName);
+        Console.WriteLine(tracker.Owner[0].UserName);
+        Console.WriteLine("Number of users: {0}", tracker.UserTrackers.Length + 1);
+    }
+}
+
+void PrintTrackerList()
+{
+    using (TrackerOperations operations = new TrackerOperations())
+    {
+        foreach (TrackerViewModelAll tracker in operations.GetAllTrackers())
+        {
+            Console.WriteLine(tracker.TrackerName);
+            Console.WriteLine(tracker.Owner[0].UserName);
+            Console.WriteLine("Number of users: {0}", tracker.UserTrackers?.Length + 1);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------");
+        }
+    }
 }

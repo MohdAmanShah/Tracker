@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Expense.Tracker.DataModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+977bd5c9bc34b5023abb44cf0fa4e77c12368920")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a08ccf6661ffdecb2097214a711635e72543845e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Expense.Tracker.DataModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Expense.Tracker.DataModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
