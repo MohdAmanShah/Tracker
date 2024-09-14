@@ -138,13 +138,5 @@ public class ExpenseOperations : DatabaseOperationsBase
         }
     }
 
-    private DbParameter CreateParameter(string name, DbType type, object value, ParameterDirection direction = ParameterDirection.Input)
-    {
-        DbParameter param = _factory.CreateParameter();
-        param.ParameterName = name;
-        param.DbType = type;
-        param.Value = value;
-        param.Direction = direction;
-        return param;
-    }
+   
 }

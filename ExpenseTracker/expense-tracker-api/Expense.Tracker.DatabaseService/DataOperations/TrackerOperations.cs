@@ -5,6 +5,7 @@ using Expense.Tracker.DataModels.ViewModels;
 using System.Text.Json;
 using System.Text;
 using Expense.Tracker.DataModels;
+using System.Data.Odbc;
 
 namespace Expense.Tracker.DatabaseService.DataOperations;
 
@@ -112,6 +113,7 @@ public class TrackerOperations : DatabaseOperationsBase
         }
         return trackers;
     }
+
     public int InsertTracker(TrackerModel tracker)
     {
         int id = 0;
@@ -264,5 +266,62 @@ public class TrackerOperations : DatabaseOperationsBase
         {
             CloseConnection();
         }
+    }
+    public UserTrackersViewModel GetUserTrackers(int userid)
+    {
+        UserTrackersViewModel userTracker = new UserTrackersViewModel();
+        try
+        {
+            OpenConnection();
+            string sqlcommand = @"SELECT
+UserId, UserName, Email, EmailVerified
+FROM tblUser
+WHERE UserId = @userid;
+
+SELECT TrackerName, Flag, Link, OwnerId, tblTracker.TrackerId AS TrackerId, AccessDate AS CreationDate
+FROM
+tblTracker
+INNER JOIN
+tbluserTracker
+ON tblTracker.TrackerId = tblUserTracker.TrackerId
+AND UserId = @userid;
+AND TrackerDeleted = 0;";
+            using (DbCommand command = _factory.CreateCommand())
+            {
+                command.Connection = _connection;
+                command.CommandText = sqlcommand;
+
+                command.Parameters.Add(CreateParameter("@userid", DbType.Int32, userid));
+                using (DbDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection))
+                {
+                    reader.Read();
+                    userTracker.user = new UserViewModel
+                    {
+                        UserId = reader.GetInt32("UserId"),
+                        UserName = reader.GetString("UserName"),
+                        Email = reader.GetString("Email"),
+                        IsEmailVerified = reader.GetBoolean("EmailVerified")
+                    };
+                    userTracker.trackers = new List<TrackerViewModel>();
+                    reader.NextResult();
+                    while (reader.Read())
+                    {
+                        userTracker.trackers.Add(new TrackerViewModel
+                        {
+                            TrackerId = reader.GetInt32("TrackerId"),
+                            TrackerName = reader.GetString("TrackerName"),
+                            Flag = reader.GetBoolean("Flag"),
+                            Link = reader.GetString("Link"),
+                            OwnerId = reader.GetInt32("OwnerId"),
+                            CreationDate = reader.GetDateTime("CreationDate"),
+                        });
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        { }
+        finally { CloseConnection(); }
+        return userTracker;
     }
 }

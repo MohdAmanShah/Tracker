@@ -10,5 +10,4 @@ public class ExpenseModel
     public System.Boolean IsMarkedDeleted { get; set; } = false;
     public required int CategoryId { get; set; }
     public required int TrackerId { get; set; }
-
 }
