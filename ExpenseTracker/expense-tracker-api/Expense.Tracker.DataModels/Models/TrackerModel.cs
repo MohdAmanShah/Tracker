@@ -11,5 +11,5 @@ public class TrackerModel
     public required System.Boolean IsMarkedDeleted { get; set; } = false;
     public string? Link { get; set; }
     public required int OwnerId { get; set; }
-    public required int TrackerId { get; set; }
+    public int TrackerId { get; set; }
 }
